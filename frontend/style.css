@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #635bdb;
+    --primary-dark: #4f46c5;
+    --primary-light: #eeedff;
+    --background: #f7f8fd;
+    --white: #ffffff;
+    --text: #20243a;
+    --muted: #7b8198;
+    --border: #e9eaf2;
+    --success: #159b70;
+    --danger: #dc5265;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #25245c, #5144a8, #7567df);
+    color: white;
+    text-align: center;
+    padding: 55px 20px 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #e3e1ff;
+    font-size: 14px;
+    margin: 9px 0;
+}
+
+#walletAddress {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+    margin-top: 12px;
+}
+
+/* WALLET BUTTON */
+#connectWallet {
+    margin-top: 18px;
+    background: white;
+    color: var(--primary-dark);
+    border-radius: 30px;
+    padding: 13px 25px;
+    font-weight: 700;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+nav button {
+    background: transparent;
+    color: #666b83;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 12px 22px;
+}
+
+nav button:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* BUTTONS */
+button {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+section {
+    background: var(--white);
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(72, 68, 140, 0.035);
+}
+
+section h2 {
+    text-align: center;
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 750;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+section > p {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* FORM */
+label {
+    display: block;
+    margin-top: 22px;
+    margin-bottom: 9px;
+    color: #454960;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fafaff;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(99, 91, 219, 0.09);
+}
+
+input::placeholder {
+    color: #a4a7b8;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    background: #fafaff;
+    padding: 11px;
+}
+
+input[type="file"]::file-selector-button {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 7px;
+    padding: 10px 14px;
+    margin-right: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SECTION BUTTONS */
+section button {
+    margin-top: 22px;
+}
+
+/* DIVIDER */
+hr {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 42px 0;
+}
+
+/* RESULTS */
+#hashResult,
+#emitResult,
+#revokeResult,
+#verifyResult {
+    margin-top: 17px;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.8;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+#hashResult {
+    background: #f5f5ff;
+    color: #5146a8;
+    border: 1px solid #e9e7ff;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 65px;
+    padding: 27px 15px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    background: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    header {
+        padding: 38px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav button {
+        width: 100%;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 13px;
+    }
+
+    section {
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    section h2 {
+        font-size: 21px;
+    }
+
+    section button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 35px;
+    }
+}
+
+/* ZONE DE GLISSER-DEPOSER */
+.drop-zone {
+    position: relative;
+    margin-top: 10px;
+    padding: 30px 20px;
+    border: 2px dashed #c9c5f5;
+    border-radius: 14px;
+    background: #faf9ff;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+    border-color: #635bdb;
+    background: #f0efff;
+}
+
+.drop-zone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.drop-icon {
+    font-size: 35px;
+}
+
+.drop-zone-content strong {
+    color: #3730a3;
+    font-size: 14px;
+}
+
+.drop-zone-content span:not(.drop-icon) {
+    color: #7b8198;
+    font-size: 13px;
+}
+
+.drop-file-name {
+    color: #159b70;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Input transparent qui recouvre la zone */
+.drop-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    padding: 0;
+}
